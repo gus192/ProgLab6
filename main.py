@@ -9,9 +9,16 @@ def encode(encoded_pw):
     new_password = encoded_list.join
     return new_password
 
-
+# Name: Noah Lunberry
 def decode(encoded_pw):
-    
+    # Name: Noah Lunberry
+    templist = list(encoded_pw)
+    newlist = []
+    for i in templist:
+        encoded_char = str((int(i) - 3) % 10)
+        newlist.append(encoded_char)
+    return ''.join(newlist)
+
 
 def main():
     encoded_pw = None
